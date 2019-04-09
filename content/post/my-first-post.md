@@ -4,7 +4,7 @@ date: 2019-04-09T23:28:19+08:00
 lastmod: 
 tags: ["小钢炮", "网站"]
 categories: ["公告"]
-draft: true
+draft: false
 ---
 
 按老灯一贯的作风，拒绝繁杂，保持简洁.
