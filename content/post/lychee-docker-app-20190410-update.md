@@ -7,21 +7,31 @@ categories: ["更新记录"]
 draft: false
 ---
 
-Lychee相册程序 其实也是很久之前的一个项目，老灯当初把它port到SQLite版，并且成功在mt7621的R6800上面运行过.
+## 城南旧事
+
+Lychee相册程序 其实也是很久之前的一个项目，老灯当初把它port到SQLite版，
+
+并且成功在MT7621的R6800路由器上面运行过.
 
 现在有基于Laravel框架开发的新版本了，由于有DB抽象层，因此port SQLite也相对容易得多.
 
 说容易，其实也还是挺麻烦的，老灯也是调试了蛮久，最终才顺利在N1上流畅运行. 
 
-最近老灯发现Lychee Laravel程序的作者也关注并star了老灯的Lychee repo. 
+然后为了方便大家安装，老灯还打包好了docker镜像（AMD64和arm64版），
 
-并且已经默认把老灯用于小钢炮固件的一些port合并到master分支了：
+可去 docker hub 围观： https://hub.docker.com/r/80x86/lychee
+
+最近老灯发现Lychee Laravel程序的作者也关注了老灯的Lychee repo,
+
+并且已经默认把老灯用于小钢炮固件的一些修改合并到master分支了：
 
 ![lychee commit log](/img/2019/04/2019-04-10.22-58-19-lychee-commit-log.png)
 
 
+## 更新记录
 
-bug修复 
+bug修复:
+
 1. 修复 `Full Settings` 无法正常提交保存的bug
 
 2. Lychee 默认图片导入路径修复
@@ -31,6 +41,7 @@ bug修复
 正确的路径是: `/app/Lychee-Laravel/public/uploads/import/` , 现已修复.
 
 改进：
+
 1. 增加 php_script_no_limit 选项，并默认设置成1，
 
     表示import 导入图片时，没有执行超时限制,
@@ -42,6 +53,20 @@ bug修复
 
 2. docker 容器的工作目录设定为程序的目录 `/app/Lychee-Laravel`
 
+
+## 如何更新
+
+如果你之前已经在docker里安装过这个相册程序，直接点击容器的名字，进去之后，选择Recreate, 
+
+然后勾选住Pull latest image, 就会拉取最新的镜像并重新创建容器，当它提示你是否替换当前的容器时，
+
+选择是即可.
+
+![lychee docker 如何更新](/img/2019/04/2019-04-10_23-18-lychee-docker-container-update.png)
+
+------------------------------------------------------------------------
+
+## 他山之石
 
 另外，有网友反馈，lychee这个UI，对手机用户不太友好。
 对此无灯也进行了一些研究。
