@@ -29,6 +29,9 @@ Lychee相册程序 其实也是很久之前的一个项目，大概在2016还是
 
 ![lychee commit log](/img/2019/04/2019-04-10.22-58-19-lychee-commit-log.png)
 
+本文主要针对旧用户升级说明.
+
+如果是新安装，请移步这里查看教程：[小钢炮Lychee相册程序安装](https://dwz.cn/QcF1ZMFw)
 
 ## 更新记录
 
