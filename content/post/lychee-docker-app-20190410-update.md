@@ -55,6 +55,18 @@ bug修复:
 
 2. docker 容器的工作目录设定为程序的目录 `/app/Lychee-Laravel`
 
+3. docker 镜像新增加 Multi-Architecture 支持
+
+    现在，如果你直接 `docker pull 80x86/lychee` (或  `docker pull 80x86/lychee:latest`) 
+
+    会默认拉取正确的镜像. 
+
+    不再需要像以前那样根据你是AMD64还是arm64环境，手动选择AMD64-latest 或 arm64-latest tag.
+
+    Multi-Architecture 大法好!
+
+    ![lychee Multi-Architecture](/img/2019/04/2019-04-11_00-01-multi-arch.png)
+
 
 ## 如何更新
 
