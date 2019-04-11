@@ -28,9 +28,62 @@ modprobe xt_set
 
 ## 0402 固件(测试版)
 
-docker默认的镜像源换成了阿里云镜像 (https://registry.docker-cn.com)
+1. docker默认的镜像源换成了阿里云镜像 (https://registry.docker-cn.com)
 
-增加 `docker-compose`, `docker-proxy`
+    增加 `docker-compose`, `docker-proxy`
+
+2. dashboard 1.5.6 和 frp 0.25.3 更新
+
+    dashboard 1.5.6:
+    frp 新增加多个选项，密码框后面都添加上了小眼睛.
+
+    修复 IPv6 直接用IP访问时，顶部的按钮URL地址错误的问题.
+
+
+    frp 更新到最新的0.25.3:
+
+    frpc 新增加WEB UI直接编辑配置 + 代码高亮配置 + 炫酷配色主题切换
+
+    如需要访问frpc admin ui,请修改 `Admin Listen Addr` 为 `0.0.0.0`
+    ，同时修改一下`Admin Password`
+
+
+    ![输入图片说明](/img/2019/04/nanodm-n1-20190411-changelog/frpc-status-new.png)
+
+    ![输入图片说明](/img/2019/04/nanodm-n1-20190411-changelog/frpc-new-option.png)
+
+
+    ![monokai](/img/2019/04/nanodm-n1-20190411-changelog/monokai.png)
+
+    ![eclipse](/img/2019/04/nanodm-n1-20190411-changelog/eclipse.png)
+
+    ![mdn-like](/img/2019/04/nanodm-n1-20190411-changelog/mdn-like.png)
+
+    ![icecoder](/img/2019/04/nanodm-n1-20190411-changelog/icecoder.png)
+
+    ![zenburn](/img/2019/04/nanodm-n1-20190411-changelog/zenburn.png)
+
+
+之前版本的用户也可通过包管理来更新:
+
+```bash
+#备份配置
+cp /etc/frpc.ini /etc/frpc.ini.bak
+cp /etc/dashboard/system.toml /etc/dashboard/system.toml.bak
+
+#更新
+opkg update
+opkg install --force-reinstall hacklog-dashboard
+opkg install --force-reinstall frp
+
+#恢复配置
+mv /etc/frpc.ini.bak /etc/frpc.ini
+mv /etc/dashboard/system.toml.bak /etc/dashboard/system.toml
+
+#重启服务
+/etc/init.d/S99dashboard restart
+/etc/init.d/S93frp restart
+```
 
 
 ## 0327 固件(测试版)
