@@ -3,7 +3,7 @@ title: "Lychee相册程序docker镜像更新20190410"
 date: 2019-04-10T20:55:19+08:00
 lastmod: 
 tags: ["Lychee", "相册", "docker", "app"]
-categories: ["更新记录"]
+categories: ["更新日志"]
 draft: false
 ---
 
