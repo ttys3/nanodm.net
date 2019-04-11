@@ -3,7 +3,7 @@ title: "0909 升级到后续版本磁盘挂载相关问题"
 date: 2019-04-03T20:55:19+08:00
 slug: 0909-upgrade-to-new-notice
 lastmod: 
-tags: ["PT", "小钢炮"]
+tags: ["磁盘挂载", "升级"]
 categories: ["升级"]
 draft: false
 ---
