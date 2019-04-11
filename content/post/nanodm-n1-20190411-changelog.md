@@ -90,7 +90,7 @@ docker默认的镜像源换成了阿里云镜像 (https://registry.docker-cn.com
 默认把/dev/data分区划分给力/var （大概有4.3GB可用空间，小一点的docker镜像完全没问题的). 暂时没给docker做GUI, 等...
 
 
-### 关于固件何种大小变化
+### 关于固件体积变化
 
 > 一直以来，固件都比较注较小巧和高效。
 
