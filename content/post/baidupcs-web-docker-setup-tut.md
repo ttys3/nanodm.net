@@ -124,13 +124,13 @@ syno里面管理docker的app就叫Docker，如果没有，你需要安装一下.
 ![synology baidupcs docker step 2](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-2.png)
 
 然后再到`映像`那里选择下载的点击`启动`开始创建容器:
-![synology baidupcs docker step 3](/img/2019/04/baid两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`upcs-web-docker-setup-tut/synology-baidupcs-3.png)
-两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`
-适量限制下，然后点击`高级设置`:两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`
-![synology baidupcs docker step 4](/img/2019/04/baid两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`upcs-web-docker-setup-tut/synology-baidupcs-4.png)
-两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`
-勾选这个可以让容器开机自启:两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`
-![synology baidupcs docker step 5](/img/2019/04/baid两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`upcs-web-docker-setup-tut/synology-baidupcs-5.png)
+![synology baidupcs docker step 3](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-3.png)
+
+适量限制下，然后点击`高级设置`:
+![synology baidupcs docker step 4](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-4.png)
+
+勾选这个可以让容器开机自启:
+![synology baidupcs docker step 5](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-5.png)
 
 同样的，映射好两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`,
 注意下载的目录要有写权限，在群晖上面一般来说是everyone权限才能让其它用户写:
