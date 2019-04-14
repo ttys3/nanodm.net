@@ -43,6 +43,9 @@ docker run -d \
 如果不打想命令行，那么，也可以通过友好的UI来进行安装，下面老灯就开始图文讲解了.
 一般来说，大家看到图就懂了，因此只有必要的地方老灯才会加以解说.
 
+老灯的手都成这样了，还在给你们码字，你们不要感觉得哭了就行了。
+
+![my hand](/img/2019/04/baidupcs-web-docker-setup-tut/my-hand-20190414130526.small.jpg)
 
 ## 1. 如何在小钢炮(NanoDM)里安装使用baidupcs-go-web
 
