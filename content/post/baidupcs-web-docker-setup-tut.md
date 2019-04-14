@@ -8,6 +8,10 @@ categories: ["教程"]
 draft: false
 ---
 
+这次的背景音乐是少司命的宿命:
+
+{{% audio url="/music/宿命.mp3" %}}
+
 为了方便大家在小钢炮(NanoDM)和群晖/威联通里下载百度网盘里的文件,老灯创建了一个amd64/arm64 架构自适应的baidupcs-go-web的镜像.
 
 地址在这里：https://hub.docker.com/r/80x86/baidupcs

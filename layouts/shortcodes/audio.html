@@ -1,0 +1,17 @@
+  {{/*
+
+
+  */}}
+
+  {{- if .IsNamedParams -}}
+  
+  <audio controls="controls" volume="0.8" loop="true" autoplay="true">
+    Your browser does not support the <code>audio</code> element.
+    <source src="{{ .Get "url" }}" type="audio/mpeg">
+  </audio>
+
+{{- else -}}
+
+audio shortcode: only named params supported.
+
+{{- end -}}
