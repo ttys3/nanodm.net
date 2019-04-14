@@ -8,6 +8,14 @@ categories: ["更新日志"]
 draft: false
 ---
 
+
+这次的背景音乐是： 又又 - 你的样子
+
+中间过门是一段又又拉的小提琴，非常赞.
+
+{{% music id="32807379" auto="1" %}}
+
+
 ## 0411 固件(测试版)
 
 1. 增加 fusermount （给rclone之类的程序挂载使用)
@@ -24,7 +32,6 @@ modprobe ip_set_bitmap_ip
 modprobe ip_set_list_set
 modprobe xt_set
 ```
-
 
 ## 0402 固件(测试版)
 
