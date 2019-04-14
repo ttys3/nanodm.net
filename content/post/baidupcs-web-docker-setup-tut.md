@@ -62,6 +62,7 @@ docker run -d \
 ![NanoDM baidupcs docker step 3](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-3.png)
 
 映射好容器里的两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`，注意映射的host 目录要有任意用可写权限:
+(注意，这里的映射模式默认是`Volume`, 我们要点击选择`bind`)
 ![NanoDM baidupcs docker step 4](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-4.png)
 
 ![NanoDM baidupcs docker step 5](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-5.png)
