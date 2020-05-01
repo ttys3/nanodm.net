@@ -1,0 +1,5 @@
+{{ if eq "index.md" .Page.File.LogicalName }}
+<img src="{{ printf "%s/%s" .Page.File.Dir .Destination | absURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+{{ else }}
+<img src="{{ .Destination | absURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+{{ end }}
