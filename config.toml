@@ -26,6 +26,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 [author]                  # essential                     # 必需
   name = "荒野無燈"
 
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "atom"
+
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
   priority = 0.5
