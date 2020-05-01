@@ -3,6 +3,8 @@ title: "NanoDM站点现已经迁移到Netlify"
 date: 2020-05-01T17:47:12+08:00
 ---
 
+## 迁移说明
+
 > NanoDM站点现已经迁移到Netlify，如果对于具体的细节感兴趣的童鞋可以参考此文
 [《使用Hugo+Netlify 5分钟部署一个网站 – NanoDM站点迁移到Netlify记》](https://ttys3.net/post/hugo/nanodm-site-hosted-on-netlify/)
 
@@ -18,3 +20,15 @@ NanoDM的站点源码此前一直托管在我的bitbucket私人仓库，这次�
 新的仓库地址为: https://github.com/ttys3/nanodm.net (欢迎fork, 欢迎贡献文章或编写FAQ)
 
 迁移到github之后，可以方便大家一起维护NanoDM的文档。毕竟单靠我一人之力，精力非常有限。 大家平常使用的时候，总会遇到这样那样的问题，而这些问题有些在群里我看到后解答了，大部分时候忙去了没看群，我是没时间回复的。 如果整理成文档呢？那么不仅是群里的人可以看到，任何遇到困难的人都可以得到帮助。文档能形成记录，方便后续的查看和引用。 另一方面是，如果大家有使用心得需要分享的，或者解决了一个疑难问题希望能帮助后来者的，也可以通过github提交PR的方式来参与贡献文档， 合并通过后会直接显示在站点。
+
+## RSS全文输出已经开启
+
+欢迎通过`Inoreader`或其它RSS阅读器订阅。
+
+`Inoreader`快速订阅URL：<https://www.inoreader.com/feed/https%3A%2F%2Fnanodm.net%2Fatom.xml>
+
+其它RSS feed阅读器请直接添加以下feed URL:
+
+```
+https://nanodm.net/atom.xml
+```
