@@ -1,3 +1,7 @@
+[build]
+publish = "public"
+command = "env TZ='Asia/Shanghai' hugo --gc --minify --enableGitInfo"
+
 [context.production.environment]
   HUGO_VERSION = "0.69.2"
   HUGO_ENV = "production"
