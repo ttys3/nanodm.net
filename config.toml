@@ -1,4 +1,7 @@
 baseURL = "http://localhost:1313/"
+# make your site browsable from a local file system
+# https://gohugo.io/content-management/urls/#relative-urls
+relativeURLs = true
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Nano Disk Manager - tiny Linux system with UI support for small computer machine"
@@ -76,7 +79,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   moreMeta = false
 
   # Syntax highlighting by highlight.js
-  highlightInClient = true
+  highlightInClient = false
 
   # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
   # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
@@ -126,7 +129,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   # Display a message at the beginning of an article to warn the readers that it's content may be outdated.
   # 在文章开头显示提示信息，提醒读者文章内容可能过时。
   [params.outdatedInfoWarning]
-    enable = false
+    enable = true
     hint = 30               # Display hint if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示提醒
     warn = 180              # Display warning if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示警告
 
@@ -162,21 +165,21 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://localhost:1313"
-    c-twitter = "http://localhost:1313"
-    d-facebook = "http://localhost:1313"
-    e-linkedin = "http://localhost:1313"
-    f-google = "http://localhost:1313"
-    g-github = "http://localhost:1313"
-    h-weibo = "http://localhost:1313"
-    i-zhihu = "http://localhost:1313"
-    j-douban = "http://localhost:1313"
-    k-pocket = "http://localhost:1313"
-    l-tumblr = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
-    o-bilibili = "http://localhost:1313"
+    a-email = ""
+    b-stack-overflow = ""
+    c-twitter = "https://twitter.com/ttys22"
+    d-facebook = ""
+    e-linkedin = ""
+    f-google = ""
+    g-github = "https://github.com/ttys3"
+    h-weibo = ""
+    i-zhihu = ""
+    j-douban = ""
+    k-pocket = ""
+    l-tumblr = ""
+    m-instagram = ""
+    n-gitlab = ""
+    o-bilibili = ""
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
