@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://nanodm.net"
 # make your site browsable from a local file system
 # https://gohugo.io/content-management/urls/#relative-urls
 relativeURLs = true
