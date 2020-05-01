@@ -2,8 +2,8 @@ baseURL = "https://nanodm.net"
 # make your site browsable from a local file system
 # https://gohugo.io/content-management/urls/#relative-urls
 relativeURLs = true
-languageCode = "en"
-defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+languageCode = "zh-CN"
+defaultContentLanguage = "zh-CN"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "Nano Disk Manager - tiny Linux system with UI support for small computer machine"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
