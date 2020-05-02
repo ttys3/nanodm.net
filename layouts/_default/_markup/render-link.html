@@ -1,5 +1,9 @@
-{{ if eq "index.md" .Page.File.LogicalName }}
-<a href="{{ printf "%s/%s" .Page.File.Dir .Destination | absURL | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "/") }}
+    <a href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
 {{ else }}
-<a href="{{ .Destination | absURL | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+    {{ if eq "index.md" .Page.File.LogicalName }}
+    <a href="{{ printf "%s/%s" .Page.File.Dir .Destination | absURL | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+    {{ else }}
+    <a href="{{ .Destination | absURL | safeURL }}" {{ with .Title}} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+    {{ end }}
 {{ end }}
