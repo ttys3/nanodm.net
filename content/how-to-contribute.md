@@ -47,9 +47,9 @@ start http://localhost:1313/
 为方便管理文章和图片之间的关联，我们采用Hugo的`page bundle`方式来写文章。
 
 1. 所有文章都在`content/post`目录下，采用markdown编写。[Front Matter](https://gohugo.io/content-management/front-matter/) 全部采用`YAML`格式。
-2. 每个文章都有自己的子目录,如`https://nanodm.net/post/nanodm-site-now-hosted-on-netlify/` 这个文章，
-其markdown文章位于`content/post/nanodm-site-now-hosted-on-netlify/index.md`
-3. 文章自己的资源文件（比如图片等）放在文章自己的目录下面, 具体可参数`https://nanodm.net/post/nanodm-site-now-hosted-on-netlify/` 这个文章
+2. 每个文章都有自己的子目录,如`/post/nanodm/beikeyun-remove-the-magic-resistor` 这个文章，
+其markdown文件位于`content/post/nanodm/beikeyun-remove-the-magic-resistor/index.md`
+3. 文章自己的资源文件（比如图片等）放在文章自己的目录下面, 具体可参考[/post/nanodm/beikeyun-remove-the-magic-resistor](/post/nanodm/beikeyun-remove-the-magic-resistor) 这个文章的[markdown源码](https://github.com/ttys3/nanodm.net/tree/master/content/post/nanodm/beikeyun-remove-the-magic-resistor)
 4. 推荐使用编辑器 vscode
 
 ## 4. vscode建议安装插件
