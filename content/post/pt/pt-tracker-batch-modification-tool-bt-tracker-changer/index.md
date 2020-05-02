@@ -6,9 +6,7 @@ tags:
 ---
 
 > 原文由 @也无荒野也无灯 发表于 2019-07-20 23:48
-
 > 原文地址（已经不可访问): `http://nanodm.net:8092/archives/46/`
-
 
 敬告
 ==
@@ -29,13 +27,13 @@ tags:
 你有什么办法？
 不要试图去阻止他，写个命令行工具给他让他去折腾吧（你真坏）
 
-
 安装
 ==
 
 里面有两个可执行文件， `.amd64`的是给Linux 64位机器用的， `.arm64`的是给Linux arm64机器用的.
 自行copy为系统里的 `/usr/local/bin/bt-tracker-changer` 即可
 最后别忘记添加执行权限：
+
 ```shell
 chmod a+rx /usr/local/bin/bt-tracker-changer
 ```
@@ -44,6 +42,7 @@ chmod a+rx /usr/local/bin/bt-tracker-changer
 ==
 
 使用太简单了.
+
 ```
 bt-tracker-changer -s "需要修改tracker的种子所在目录" -d "修改之后的种子保存目录" -f '旧的tracker地址' -t '新tracker地址'
 ```
@@ -55,16 +54,18 @@ bt-tracker-changer -s "需要修改tracker的种子所在目录" -f '旧的track
 ```
 
 如果只是想查看一下种子信息，可以这样：
+
 ```shell
 bt-tracker-changer -i -s "种子目录"
 ```
 
 帮助信息：
+
 ```shell
 bt-tracker-changer -h
- ------------------------------------------------------- 
- ===== bt-tracker-changer v1.0.1 by HuangYeWuDeng  ===== 
- ------------------------------------------------------- 
+ -------------------------------------------------------
+ ===== bt-tracker-changer v1.0.1 by HuangYeWuDeng  =====
+ -------------------------------------------------------
 Usage of ./release/bt-tracker-changer:
   -b string
         the directory to backup the torrent before change it (default "backup")
@@ -79,6 +80,5 @@ Usage of ./release/bt-tracker-changer:
   -t string
         new tracker URL
 ```
-
 
   [1]: bt-tracker-changer-v1.0.1.zip
