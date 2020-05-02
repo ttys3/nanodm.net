@@ -42,7 +42,7 @@ Wrong credentials 应该翻译成 错误的凭据
 
 然后我检查了下这位朋友的N1的系统时间，没错，NTP没能成功同步，系统时间还停留在2017年，如下图：
 
-![](/img/2019/04/why-filebrowser-raise-wrong-credentials-error-even-with-right-credentials/8ca89270-d263-4daf-bd75-9f64ca61aa47.png)
+![](img/8ca89270-d263-4daf-bd75-9f64ca61aa47.png)
 
   
 
@@ -70,17 +70,17 @@ token里面是带有时间戳标记的，但是，如果服务器本身的时间
 curl -k -H "Content-Type:application/json" -X POST -d '{"username":"admin","password":"admin","recaptcha":""}'  https://192.168.8.201:8082/api/login
 ```
 
-![](/img/2019/04/why-filebrowser-raise-wrong-credentials-error-even-with-right-credentials/28118934.png)
+![](img/28118934.png)
 
   
 
 然后，老灯觉得可能是前端判断的问题。于是看了下登录相关的vue源码：
 
-![](/img/2019/04/why-filebrowser-raise-wrong-credentials-error-even-with-right-credentials/28082716.png)
+![](img/28082716.png)
 
 加了句打印日志代码，重新编译生成程序后，运行，然后到console看下：
 
-![](/img/2019/04/why-filebrowser-raise-wrong-credentials-error-even-with-right-credentials/28242938.png)
+![](img/28242938.png)
 
   
 
@@ -136,6 +136,6 @@ token的生成和校验都是在服务端，客户端其实没必要多此一举
 
 欢迎关注老灯的微信公众号：路由器的那些事儿  （iproute2)
 
-![](/img/2019/04/why-filebrowser-raise-wrong-credentials-error-even-with-right-credentials/7d15018e-d35a-4b22-b49f-fdb9e6872bc5.png)
+![](img/7d15018e-d35a-4b22-b49f-fdb9e6872bc5.png)
 
 -- EOF

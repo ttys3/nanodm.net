@@ -46,7 +46,7 @@ alpine linux天生就是给docker用的（最小镜像只有5M左右）。
 
 pull 数量有1M+，应该算是比较高票的。
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/82869709.png)
+![](img/82869709.png)
 
 切换到container, 我们新建一个容器：
 
@@ -59,7 +59,7 @@ Image 处我们填写： hermsi/alpine-sshd
 Port mapping 即端口映射，我们这里将本机的**1022**
 端口映射到了容器里的**22**端口. 协议类型默认选的是**TCP**.
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/83424730.png)
+![](img/83424730.png)
 
 先别着急点 **Deploy the container**， 我们先设置一下高级选项：
 
@@ -68,7 +68,7 @@ Port mapping 即端口映射，我们这里将本机的**1022**
 
   
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/83750072.png)
+![](img/83750072.png)
 
   
 
@@ -86,17 +86,17 @@ host那里填写： /tmp/data
 像下图这样设置，我们在容器里访问 /data
 就实际访问的是host机的/tmp/data了：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/83840213.png)
+![](img/83840213.png)
 
 最后，我们勾选 Deploy the container 开始发布容器.
 
 由于这个镜像真的是很小很小，因此，大概几秒钟之后，容器就OK了，然后我们可以看到它是运行状态：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/84103111.png)
+![](img/84103111.png)
 
 别高兴太早，没过一会，就会发现这个容器停止运行了。我们点击查看一下log:
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/84263264.png)
+![](img/84263264.png)
 
 然后发现如下错误：
 
@@ -106,7 +106,7 @@ host那里填写： /tmp/data
 standard_init_linux.go:207: exec user process caused "exec format error"
 ```
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/84306431.png)
+![](img/84306431.png)
 
 
 没错，这是用arm64机器玩docker,遇到的最常见的一个错误.
@@ -119,7 +119,7 @@ standard_init_linux.go:207: exec user process caused "exec format error"
 
 然后我们看左边的description下面有： Supported architectures
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/84747512.png)
+![](img/84747512.png)
 
 我们点击arm64v8,就可以到 <https://hub.docker.com/r/arm64v8/alpine/>
 
@@ -201,7 +201,7 @@ docker push 80x86/alpine-sshd-arm64:latest
 镜像已经上传到了这里： <https://hub.docker.com/r/80x86/alpine-sshd-arm64>
 
 点击我们前面创建的那个 learnLinux
-容器，然后点击![](/img/2019/03/nanodm-docker-play-minimal-image/1931098.png)
+容器，然后点击![](img/1931098.png)
 
 Image处修改为：
 
@@ -209,24 +209,24 @@ Image处修改为：
 80x86/alpine-sshd-arm64
 ```
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/1978206.png)
+![](img/1978206.png)
 
 然后再点击 Deploy the container 按钮，弹出如下提示，选择Replace:
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/2006055.png)
+![](img/2006055.png)
 
 几秒钟之后就好了：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/2107812.png)
+![](img/2107812.png)
 
-我们点击console按钮![](/img/2019/03/nanodm-docker-play-minimal-image/2170005.png)，
+我们点击console按钮![](img/2170005.png)，
 然后再选择Command为 /bin/sh （因为alpine linux下面默认是没有bash的）：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/2142109.png)
+![](img/2142109.png)
 
 然后点击Connect就进入shell了：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/2267801.png)
+![](img/2267801.png)
 
 但是在web ui里操作这个shell毕竟还是没那么方便。
 
@@ -234,7 +234,7 @@ Image处修改为：
 
 接下来我们从ssh客户端连接到容器试试：
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/4406588.png)
+![](img/4406588.png)
 
 OK, 登录成功.
 
@@ -250,7 +250,7 @@ win10用户也可以直接用ssh命令连接.
 
 里面的大部分命令都是支持的.
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/1df0433e-4373-408a-bf1a-aa3ac9935198.jpg)
+![](img/1df0433e-4373-408a-bf1a-aa3ac9935198.jpg)
 
   
 
@@ -274,6 +274,6 @@ ssh-keygen等几乎是必须的工具.
 
 最后，欢迎关注老灯的微信公众号：路由器的那些事儿  （iproute2)
 
-![](/img/2019/03/nanodm-docker-play-minimal-image/6663194d-772e-4a8c-b272-7aff13b78960.jpg)
+![](img/6663194d-772e-4a8c-b272-7aff13b78960.jpg)
 
 --EOF

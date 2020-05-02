@@ -55,20 +55,20 @@ modprobe xt_set
     ，同时修改一下`Admin Password`
 
 
-    ![输入图片说明](/img/2019/04/nanodm-n1-20190411-changelog/frpc-status-new.png)
+    ![输入图片说明](img/frpc-status-new.png)
 
-    ![输入图片说明](/img/2019/04/nanodm-n1-20190411-changelog/frpc-new-option.png)
+    ![输入图片说明](img/frpc-new-option.png)
 
 
-    ![monokai](/img/2019/04/nanodm-n1-20190411-changelog/monokai.png)
+    ![monokai](img/monokai.png)
 
-    ![eclipse](/img/2019/04/nanodm-n1-20190411-changelog/eclipse.png)
+    ![eclipse](img/eclipse.png)
 
-    ![mdn-like](/img/2019/04/nanodm-n1-20190411-changelog/mdn-like.png)
+    ![mdn-like](img/mdn-like.png)
 
-    ![icecoder](/img/2019/04/nanodm-n1-20190411-changelog/icecoder.png)
+    ![icecoder](img/icecoder.png)
 
-    ![zenburn](/img/2019/04/nanodm-n1-20190411-changelog/zenburn.png)
+    ![zenburn](img/zenburn.png)
 
 
 之前版本的用户也可通过包管理来更新:
@@ -103,7 +103,7 @@ mv /etc/dashboard/system.toml.bak /etc/dashboard/system.toml
 
 会随机选择图片。如要固定一张，只放一张即可。
 
-![](/img/2019/04/2019-04-12.00-09-33.jpg)
+![](/img/2019-04-12.00-09-33.jpg)
 
 
 关于docker:
@@ -113,7 +113,7 @@ mv /etc/dashboard/system.toml.bak /etc/dashboard/system.toml
 视你的网速而定，这里可能要等待几十秒到几分钟。
 安装好之后状态是这样的：
 
-![](/img/2019/04/2019-04-12.00-04-31-docker-cfg.png)
+![](img/2019-04-12.00-04-31-docker-cfg.png)
 
 ## 0326 固件(测试版)
 

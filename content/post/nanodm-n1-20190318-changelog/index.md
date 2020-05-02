@@ -38,7 +38,7 @@ pandoc -f html -t markdown_github-raw_html-native_divs-native_spans-hard_line_br
 status 页面： IPv6 IP 已经可以显示了
 --------------------------------------
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/dashboard-overview.png)
+![](img/dashboard-overview.png)
 
   
 
@@ -49,11 +49,11 @@ dashboard 增强登录安全
 
 如果同一个IP连续登录失败超过5次，则该IP会被锁定登录1小时（即1小时之内不能再登录）
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/failed-login-log.png)
+![](img/failed-login-log.png)
 
 dashboad log里也有相关失败登录的信息，比如IP地址，失败次数：
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/ip-ban-log.png)
+![](img/ip-ban-log.png)
 
   
 
@@ -78,7 +78,7 @@ movie ...
 
 6\. 如果是挂载的ntfs系统且有dirty标识 ，则访问此页面时会尝试修复
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/disks12.gif)
+![](img/disks12.gif)
 
   
 
@@ -90,7 +90,7 @@ aria2优化
 2\. rpc secret 更改之后，再打开web ui界面，不再需要点击 reset
 即可自动重新连接上rpc.
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/aria2-web-auto-refresh-config.gif)
+![](img/aria2-web-auto-refresh-config.gif)
 
   
 
@@ -109,7 +109,7 @@ Gerbera , 可实现同步登录.
 ( transmission 由于是采用古老的http
 basic认证，同步登录的接口不好搞。暂不能同步登录。)
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/sync-login.gif)
+![](img/sync-login.gif)
 
   
 
@@ -127,7 +127,7 @@ basic认证，同步登录的接口不好搞。暂不能同步登录。)
 
   
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/tr-new-config-options.png)
+![](img/tr-new-config-options.png)
 
   
 
@@ -141,7 +141,7 @@ Samba共享目录配置优化
 
 (注意：！！！ Name 字段必须唯一 )
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/smb-share-config.gif)
+![](img/smb-share-config.gif)
 
   
 
@@ -151,7 +151,7 @@ SAMBA用户管理
 
 现在的版本已经修复了。
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/smb-new-users.gif)
+![](img/smb-new-users.gif)
 
 
 ---------------------------------------------------------------------
@@ -171,7 +171,7 @@ NTP设置优化
 
   
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/ntp-status.gif)
+![](img/ntp-status.gif)
 
   
 
@@ -186,9 +186,9 @@ ui,挺好的。
 另外 ，如果中文显示成问号 ? , 可在后台Startup 处重启一次 S99gerbera
 临时解决.
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/gerbera.png)
+![](img/gerbera.png)
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/gerbera-Chinese.png)
+![](img/gerbera-Chinese.png)
 
   
 
@@ -197,7 +197,7 @@ ui,挺好的。
 
 如下图，nfs options默认填写好了，如果不想改直接用默认的就行.
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/nfsd.png)
+![](img/nfsd.png)
 
   
 
@@ -208,21 +208,21 @@ ui,挺好的。
 
 aria2 增加磁盘缓存选项：
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/aria2-op.png)
+![](img/aria2-op.png)
 
   
 
 计划任务默认有aria2
 tracker自动更新的配置，只需要删除注释符号\#即可启用,如下图：
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/aria2-tracker-auto.png)
+![](img/aria2-tracker-auto.png)
 
   
 
 samba: 增加ntlm auth 选项，设置成yes
 可解决部分电视盒子的老系统无法通过smb连接上的问题
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/smb-auth-ntml.png)
+![](img/smb-auth-ntml.png)
 
   
 
@@ -232,7 +232,7 @@ ftp: 
 
 增加pasv\_promiscuous 选项
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/vsftpd-option.png)
+![](img/vsftpd-option.png)
 
  
 
@@ -378,7 +378,7 @@ bug 修复：
 
 欢迎关注老灯的微信公众号：路由器的那些事儿  （iproute2)
 
-![](/img/2019/03/nanodm-n1-20190318-changelog/0.12155670273549757.png)
+![](img/0.12155670273549757.png)
 
   
 

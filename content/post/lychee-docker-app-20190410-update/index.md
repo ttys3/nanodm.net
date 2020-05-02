@@ -27,7 +27,7 @@ Lychee相册程序 其实也是很久之前的一个项目，大概在2016还是
 
 并且已经默认把老灯用于小钢炮固件的一些修改合并到master分支了：
 
-![lychee commit log](/img/2019/04/2019-04-10.22-58-19-lychee-commit-log.png)
+![lychee commit log](2019-04-10.22-58-19-lychee-commit-log.png)
 
 本文主要针对旧用户升级说明.
 
@@ -68,7 +68,7 @@ bug修复:
 
     Multi-Architecture 大法好!
 
-    ![lychee Multi-Architecture](/img/2019/04/2019-04-11_00-01-multi-arch.png)
+    ![lychee Multi-Architecture](2019-04-11_00-01-multi-arch.png)
 
 
 ## 如何更新
@@ -79,7 +79,7 @@ bug修复:
 
 选择是即可.
 
-![lychee docker 如何更新](/img/2019/04/2019-04-10_23-18-lychee-docker-container-update.png)
+![lychee docker 如何更新](2019-04-10_23-18-lychee-docker-container-update.png)
 
 ------------------------------------------------------------------------
 
@@ -111,8 +111,8 @@ bug修复:
 [点此查看网上其他用户的demo效果](https://gallery.yorkchou.com/)
 
 
-![](/img/2019/04/2019-04-10.23-05-37-imagevue.png)
+![](2019-04-10.23-05-37-imagevue.png)
 
 功能一览：
 
-![imagevue功能一览](/img/2019/04/2019-04-10.23-06-06-imagevue-feature.png)
+![imagevue功能一览](2019-04-10.23-06-06-imagevue-feature.png)

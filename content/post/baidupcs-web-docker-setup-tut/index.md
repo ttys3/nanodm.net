@@ -49,39 +49,39 @@ docker run -d \
 
 老灯的手都成这样了，还在给你们码字，你们不要感觉得哭了就行了。
 
-![my hand](/img/2019/04/baidupcs-web-docker-setup-tut/my-hand-20190414130526.small.jpg)
+![my hand](img/my-hand-20190414130526.small.jpg)
 
 ## 1. 如何在小钢炮(NanoDM)里安装使用baidupcs-go-web
 
 首先确保你已经启用并且启动了docker, docker UI成功安装且处于正常运行状态:
 
-![NanoDM baidupcs docker step 1](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-1.png)
+![NanoDM baidupcs docker step 1](img/ndm-baidupcs-1.png)
 
 然后点击`Add container` 添加容器：
 
-![NanoDM baidupcs docker step 2](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-2.png)
+![NanoDM baidupcs docker step 2](img/ndm-baidupcs-2.png)
 
 按下图配置好，注意在Image处填写： `80x86/baidupcs:latest`
 
-![NanoDM baidupcs docker step 3](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-3.png)
+![NanoDM baidupcs docker step 3](img/ndm-baidupcs-3.png)
 
 映射好容器里的两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`，注意映射的host 目录要有任意用可写权限:
 (注意，这里的映射模式默认是`Volume`, 我们要点击选择`bind`)
-![NanoDM baidupcs docker step 4](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-4.png)
+![NanoDM baidupcs docker step 4](img/ndm-baidupcs-4.png)
 
-![NanoDM baidupcs docker step 5](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-5.png)
+![NanoDM baidupcs docker step 5](img/ndm-baidupcs-5.png)
 
 配置好之后，最后点击`Deploy the container`创建容器:
-![NanoDM baidupcs docker step 6](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-6.png)
+![NanoDM baidupcs docker step 6](img/ndm-baidupcs-6.png)
 
 成功之后，会显示绿色的`running`状态：
-![NanoDM baidupcs docker step 7](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-7.png)
+![NanoDM baidupcs docker step 7](img/ndm-baidupcs-7.png)
 
 日志:
-![NanoDM baidupcs docker step 8](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-8.png)
+![NanoDM baidupcs docker step 8](img/ndm-baidupcs-8.png)
 
 baidupcs web UI打开效果：
-![NanoDM baidupcs docker step 9](/img/2019/04/baidupcs-web-docker-setup-tut/ndm-baidupcs-9.png)
+![NanoDM baidupcs docker step 9](img/ndm-baidupcs-9.png)
 
 
 ----------------------------------------------------------------------------------------------
@@ -91,30 +91,30 @@ baidupcs web UI打开效果：
 QNAP有一个更友好的UI用于创建容器, 我们打开`Container Station`, 然后搜索镜像： `80x86/baidupcs`，
 找到下图的镜像后，点击`创建`：
 
-![QNAP baidupcs docker step 1](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-1.png)
+![QNAP baidupcs docker step 1](img/QNAP-baidupcs-1.png)
 
 这里直接点下一步:
-![QNAP baidupcs docker step 2](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-2.png)
+![QNAP baidupcs docker step 2](img/QNAP-baidupcs-2.png)
 
 可以根据自己的需求，限制一下CPU和内存使用,再点进`高级配置`:
-![QNAP baidupcs docker step 3](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-3.png)
+![QNAP baidupcs docker step 3](img/QNAP-baidupcs-3.png)
 
 映射好`5299`端口，主机这边的端口可自行设定，右边容器处的端口`5299`是固定的：
-![QNAP baidupcs docker step 4](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-4.png)
+![QNAP baidupcs docker step 4](img/QNAP-baidupcs-4.png)
 
 路径映射，映射好容器里的两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`，
 
 这里我把baidupcs的配置文件映射到了volume(存储空间), 下载路径则映射到了现有的一个下载目录:
 
-![QNAP baidupcs docker step 5](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-5.png)
+![QNAP baidupcs docker step 5](img/QNAP-baidupcs-5.png)
 
-![QNAP baidupcs docker step 6](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-6.png)
+![QNAP baidupcs docker step 6](img/QNAP-baidupcs-6.png)
 
 创建成功：
-![QNAP baidupcs docker step 7](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-7.png)
+![QNAP baidupcs docker step 7](img/QNAP-baidupcs-7.png)
 
 日志查看：
-![QNAP baidupcs docker step 8](/img/2019/04/baidupcs-web-docker-setup-tut/QNAP-baidupcs-8.png)
+![QNAP baidupcs docker step 8](img/QNAP-baidupcs-8.png)
 
 ----------------------------------------------------------------------------------------------
 
@@ -124,33 +124,33 @@ syno里面管理docker的app就叫Docker，如果没有，你需要安装一下.
 功能和QNAP的 `Container Station` 类似. 个人觉得在容器建立的流程这里QNAP的UI显得很直观.
 
 在syno里面，你得先通过搜索`baidupcs`找到对应的镜像后，下载镜像:
-![synology baidupcs docker step 1](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-1.png)
+![synology baidupcs docker step 1](img/synology-baidupcs-1.png)
 
-![synology baidupcs docker step 2](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-2.png)
+![synology baidupcs docker step 2](img/synology-baidupcs-2.png)
 
 然后再到`映像`那里选择下载的点击`启动`开始创建容器:
-![synology baidupcs docker step 3](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-3.png)
+![synology baidupcs docker step 3](img/synology-baidupcs-3.png)
 
 适量限制下，然后点击`高级设置`:
-![synology baidupcs docker step 4](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-4.png)
+![synology baidupcs docker step 4](img/synology-baidupcs-4.png)
 
 勾选这个可以让容器开机自启:
-![synology baidupcs docker step 5](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-5.png)
+![synology baidupcs docker step 5](img/synology-baidupcs-5.png)
 
 同样的，映射好两个路径: `/app/Downloads` 和 `/app/.config/BaiduPCS-Go`,
 注意下载的目录要有写权限，在群晖上面一般来说是everyone权限才能让其它用户写:
 
-![synology baidupcs docker step 6](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-6.png)
+![synology baidupcs docker step 6](img/synology-baidupcs-6.png)
 
-![synology baidupcs docker step 7](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-7.png)
+![synology baidupcs docker step 7](img/synology-baidupcs-7.png)
 
-![synology baidupcs docker step 8](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-8.png)
+![synology baidupcs docker step 8](img/synology-baidupcs-8.png)
 
-![synology baidupcs docker step 9](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-9.png)
+![synology baidupcs docker step 9](img/synology-baidupcs-9.png)
 
-![synology baidupcs docker step 10](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-10.png)
+![synology baidupcs docker step 10](img/synology-baidupcs-10.png)
 
-![synology baidupcs docker step 11](/img/2019/04/baidupcs-web-docker-setup-tut/synology-baidupcs-11.png)
+![synology baidupcs docker step 11](img/synology-baidupcs-11.png)
 
 
 欢迎关注老灯的微信公众号：路由器的那些事儿  （iproute2)
