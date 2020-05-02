@@ -18,10 +18,21 @@ Windows用户需要特别注意，把`hugo.exe`所在的目录加入`PATH`环境
 ```bash
 git clone https://github.com/ttys3/nanodm.net.git
 cd nanodm.net
-hugo server -D
-```
-然后打开 <http://localhost:1313/> 即可查看。
+# Linux/Mac
+./dev
+# 如果是Windows请执行
+dev
 
+# 然后打开 <http://localhost:1313/> 即可查看
+# Linux
+xdg-open http://localhost:1313/
+# Mac
+open http://localhost:1313/
+# Windows
+start http://localhost:1313/
+```
+
+也可以直接在浏览器输入地址打开 <http://localhost:1313/>
 
 ## 2. 我有文章想分享要怎么做
 
@@ -35,7 +46,7 @@ hugo server -D
 
 为方便管理文章和图片之间的关联，我们采用Hugo的`page bundle`方式来写文章。
 
-1. 所有文章都在`content/post`目录下，采用markdown编写。
+1. 所有文章都在`content/post`目录下，采用markdown编写。[Front Matter](https://gohugo.io/content-management/front-matter/) 全部采用`YAML`格式。
 2. 每个文章都有自己的子目录,如`https://nanodm.net/post/nanodm-site-now-hosted-on-netlify/` 这个文章，
 其markdown文章位于`content/post/nanodm-site-now-hosted-on-netlify/index.md`
 3. 文章自己的资源文件（比如图片等）放在文章自己的目录下面, 具体可参数`https://nanodm.net/post/nanodm-site-now-hosted-on-netlify/` 这个文章
@@ -82,10 +93,10 @@ ext install kaellarkin.hugo-shortcode-syntax
 ext install fivethree.vscode-hugo-snippets
 ```
 
-[hugofy](https://marketplace.visualstudio.com/items?itemName=akmittal.hugofy)
+[hugofy with page bundle support](https://marketplace.visualstudio.com/items?itemName=ttys3.hugofy)
 
 ```bash
-ext install akmittal.hugofy
+ext install ttys3.hugofy
 ```
 
 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
