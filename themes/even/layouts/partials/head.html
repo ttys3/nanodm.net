@@ -62,16 +62,16 @@
 
 <!-- Styles -->
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+<link href="{{ $style.Permalink }}" rel="stylesheet">
 {{ if .Site.Params.publicCDN.enable -}}
   {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCSS | safeHTML }}{{ end }}
 {{- else -}}
-  {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}" rel="stylesheet">{{ end }}
+  {{ if .Site.Params.fancybox }}<link href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | absURL }}" rel="stylesheet">{{ end }}
 {{- end -}}
 
 <!-- custom css -->
 {{ range .Site.Params.customCSS -}}
-<link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+<link rel="stylesheet" href="{{ "/css/" | absURL }}{{ . }}">
 {{ end }}
 
 {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
