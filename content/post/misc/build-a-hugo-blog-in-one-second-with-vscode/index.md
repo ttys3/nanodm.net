@@ -20,7 +20,7 @@ Hugofy插件安装方法：
 hugo是基于golang开发的，天生跨平台。
 
 Windows 下可使用`choco install hugo -confirm` 或 `scoop install hugo`快速安装hugo。
-如果这两个工具你都没有，安装过程也非常简单。只需要下载合适你系统版本(xxxx-Windows-64bit.zip)的[Hugo 二进制](https://github.com/gohugoio/hugo/releases)。
+如果这两个工具你都没有，安装过程也非常简单,只需要下载合适你系统版本(xxxx-Windows-64bit.zip)的[Hugo 二进制](https://github.com/gohugoio/hugo/releases)。
 为了更方便的使用，你应该把它安装到你的 `PATH` 环境变量所在的位置。
 
 Mac可使用`brew install hugo` 快速安装hugo
@@ -30,5 +30,7 @@ Fedora/CentOS/RHEL 可使用 `sudo dnf install -y hugo` 快速安装hugo
 Debian/Ubuntu `sudo apt-get install hugo`
 
 ArchLinux `sudo pacman -Syu hugo`
+
+1分钟使用vscode建立hugo博客视频
 
 {{< video mp4="1分钟使用vscode建立hugo博客.mp4" >}}
