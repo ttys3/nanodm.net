@@ -1,17 +1,47 @@
+{{ $mp4Src := "" }}
+{{ $webmSrc := "" }}
+{{ $ogvSrc := "" }}
+
 {{ if .IsNamedParams }}
 
-  <video style="max-width: 960px;" class="hg-player video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
-    <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
-    <source src="{{ .Get "webm" }}" type="video/webm"></source>
-    <source src="{{ .Get "ogv" }}" type=video/ogg></source>
-  </video>
+  {{ $mp4Src = .Get "mp4" }}
+  {{ $webmSrc = .Get "webm" }}
+  {{ $ogvSrc = .Get "ogv" }}
 
 {{ else }}
 
-  <video style="max-width: 960px;" class="hg-player video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
-    <source src="{{ .Get 0 }}" type="video/mp4"></source>
-    <source src="{{ .Get 1 }}" type="video/webm"></source>
-    <source src="{{ .Get 2 }}" type="video/ogg"></source>
-  </video>
+  {{ $mp4Src = .Get 0 }}
+  {{ $webmSrc = .Get 1 }}
+  {{ $ogvSrc = .Get 2 }}
 
 {{ end }}
+
+{{ $self := . }}
+
+{{ $videoTagScratch := newScratch }}
+{{ $videoTagScratch.Set "mp4" $mp4Src }}
+{{ $videoTagScratch.Set "webm" $webmSrc }}
+{{ $videoTagScratch.Set "ogv" $ogvSrc }}
+
+{{ $sources := slice $mp4Src $webmSrc $ogvSrc }}
+
+{{ range $type := (slice "mp4" "webm" "gov") }}
+{{ $theSrc := $videoTagScratch.Get $type }}
+{{ if ne $theSrc "" }}
+  {{ if or (strings.HasPrefix $theSrc "http") (strings.HasPrefix $theSrc "/") }}
+  {{ else }}
+    {{ if eq "index.md"  $self.Page.File.LogicalName }}
+        {{ $videoTagScratch.Set $type (printf "%s/%s"  $self.Page.File.Dir $theSrc | absURL | safeURL) }}
+    {{ else }}
+      {{ $videoTagScratch.Set $type ($theSrc | absURL | safeURL) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ end }}
+
+<video style="max-width: 960px;" class="hg-player video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+  {{ with $videoTagScratch.Get "mp4" }}<source src="{{ . }}" type="video/mp4"></source>{{ end }}
+  {{ with $videoTagScratch.Get "webm" }}<source src="{{ . }}" type="video/webm"></source>{{ end }}
+  {{ with $videoTagScratch.Get "ogv" }}<source src="{{ . }}" type="video/ogg"></source>{{ end }}
+</video>
+
