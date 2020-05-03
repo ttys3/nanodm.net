@@ -1,0 +1,17 @@
+{{ if .IsNamedParams }}
+
+  <video style="max-width: 960px;" class="hg-player video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+    <source src="{{ .Get "mp4" }}" type="video/mp4"></source>
+    <source src="{{ .Get "webm" }}" type="video/webm"></source>
+    <source src="{{ .Get "ogv" }}" type=video/ogg></source>
+  </video>
+
+{{ else }}
+
+  <video style="max-width: 960px;" class="hg-player video-js vjs-big-play-centered" controls preload="auto" data-setup="{}">
+    <source src="{{ .Get 0 }}" type="video/mp4"></source>
+    <source src="{{ .Get 1 }}" type="video/webm"></source>
+    <source src="{{ .Get 2 }}" type="video/ogg"></source>
+  </video>
+
+{{ end }}
