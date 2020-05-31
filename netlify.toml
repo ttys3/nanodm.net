@@ -3,7 +3,7 @@ publish = "public"
 command = "env TZ='Asia/Shanghai' hugo --gc --minify --enableGitInfo"
 
 [context.production.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.71.1"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
@@ -11,6 +11,6 @@ command = "env TZ='Asia/Shanghai' hugo --gc --minify --enableGitInfo"
 command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.71.1"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
