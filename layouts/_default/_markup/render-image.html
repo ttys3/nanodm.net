@@ -1,9 +1,17 @@
-{{ if or (strings.HasPrefix .Destination "http") (strings.HasPrefix .Destination "/") }}
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+{{ $imgSrc := "" }}
+
+{{ $imgURL := urls.Parse .Destination }}	
+
+{{/* do not touch URL start with a Scheme like `http` or absolute PATH URL */}}
+{{/* for absolute PATH, absURL will convert it to absolute URL */}}
+{{ if or (ne $imgURL.Scheme "") (strings.HasPrefix .Destination "/") }}
+    {{ $imgSrc = .Destination | absURL | safeURL }}
 {{ else }}
     {{ if eq "index.md" .Page.File.LogicalName }}
-    <img src="{{ printf "%s/%s" .Page.File.Dir .Destination | absURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
-    {{ else }}
-    <img src="{{ .Destination | absURL | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+        {{ $imgSrc = printf "%s/%s" .Page.File.Dir .Destination | absURL | safeURL }}
     {{ end }}
 {{ end }}
+
+<a class="post-img-lb" href="{{ $imgSrc }}" data-caption="{{ .Text }}">
+    <img src="{{ $imgSrc }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+</a>
