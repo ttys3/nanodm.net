@@ -9,11 +9,19 @@ tags:
 > 原文地址（已经不可访问): `http://nanodm.net:8092/archives/47/`
 
 先上工具吧：
-[qb-tracker-update-bulk-20190804.zip][1]
+[qb批量修改tracker工具-带web界面-20191212-release.zip](qb批量修改tracker工具-带web界面-20191212-release.zip)
+
 (支持 windows 64bit, Mac OSX 64bit, Linux x86_64 and arm64)
 
-注：此下载包于2019-09-20 更新, 为了兼容之前的下载地址， 文件名保持不变，里面的内容变了.
+注：此下载包于2019-12-12 更新, 为了兼容之前的下载地址， 文件名保持不变，里面的内容变了. 因此老地址也可以下载：
+[qb-tracker-update-bulk-20190804.zip](qb-tracker-update-bulk-20190804.zip)
 
+md5sum
+
+```bash
+9a279b0ef7247b69f1fd9ef150ca1c0a  qb-tracker-update-bulk-20190804.zip
+9a279b0ef7247b69f1fd9ef150ca1c0a  qb批量修改tracker工具-带web界面-20191212-release.zip
+```
 熟悉qBittorrent 的童鞋都知道，qb可以很方便地跳过校验. 其底层的实现，依赖一个fastresume文件，每个种子都有一个对应的fastresume文件，
 这里面记录着很多qb需要用到的信息，当然，也包括tracker地址.
 对于已经完成的种子，qb是不会再读取torrent文件里的tracker地址的，而是直接从fastresume文件中获取.
@@ -90,7 +98,7 @@ file-version integer: 1
 info-hash string, the info hash of the torrent this data is saved for.
 blocks per piece integer, the number of blocks per piece. Must be: piece_size / (16 * 1024). Clamped to be within the range [1, 256]. It is the number of blocks per (normal sized) piece. Usually each block is 16 * 1024 bytes in size. But if piece size is greater than 4 megabytes, the block size will increase.
 pieces A string with piece flags, one character per piece. Bit 1 means we have that piece. Bit 2 means we have verified that this piece is correct. This only applies when the torrent is in seed_mode.
-slots 
+slots
 
 list of integers. The list maps slots to piece indices. It tells which piece is on which slot. If piece index is -2 it means it is free, that there's no piece there. If it is -1, means the slot isn't allocated on disk yet. The pieces have to meet the following requirement:
 
@@ -135,7 +143,7 @@ piece integer, the index of the piece this entry refers to.
 bitmask string, a binary bitmask representing the blocks that have been downloaded in this piece.
 adler32 The adler32 checksum of the data in the blocks specified by bitmask.
 file sizes list where each entry corresponds to a file in the file list in the metadata. Each entry has a list of two values, the first value is the size of the file in bytes, the second is the time stamp when the last time someone wrote to it. This information is used to compare with the files on disk. All the files must match exactly this information in order to consider the resume data as current. Otherwise a full re-check is issued.
-allocation 
+allocation
 The allocation mode for the storage. Can be either full or compact. If this is full, the file sizes and timestamps are disregarded. Pieces are assumed not to have moved around even if the files have been modified after the last resume data checkpoint.
 ```
 
@@ -368,7 +376,7 @@ HTTP Status Code Scenario
  origUrl was not found
 
 200
- 
+
 All other scenarios
 ```
 
@@ -381,5 +389,3 @@ All other scenarios
 
 使用也比较简单：
 qb-tracker-update-bulk -a "qb webui 登录地址" -u "用户名" -p "密码" -orig  "需要替换的tracker地址" -new "新的tracker地址"
-
-  [1]: qb-tracker-update-bulk-20190804.zip
